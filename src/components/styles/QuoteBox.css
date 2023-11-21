@@ -1,0 +1,108 @@
+
+/* estilos para conteiner padre y centrar los elementos de adentro */
+
+.quotebox{
+    
+    max-width: 400px;
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+    
+}
+
+/* centrar el autor, sacandolo del flujo y posicionandolo abajo*/
+.quotebox__author{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/* yo le pongo a todas las imagenes display block y width 100% para manejar su tamaño con el div padre o contenedor padre*/
+img{
+    display: block;
+    width: 100%;
+}
+
+   /* aqui dandole tamaño al button la imagen adapto ese tamaño por los estilos anteriores
+   y le puse position relative solo porque a la imagen del planeta le habia puesto position absolute y me tapaba el boton, 
+   entonces a este le di relative para darle un z-index mayor y que no me lo tape, porque sino no se le podria dar click*/
+button{
+    border: 0;
+    background-color: transparent;
+    width: 50px;
+    position: relative;
+    z-index: 10;
+}
+  
+ /* le di un pequeño estilo al boton al momento de pasar el mouse*/
+button:hover{
+  opacity: .8;    
+}
+
+/*a la caja blanca le di un height fijo para que se agrande  */
+.quotebox__box{
+    background: linear-gradient(to bottom,rgb(255,255,255),rgba(255,255,255,.367));
+    border-radius: 30px;
+    color: black;
+    height: 150px;
+    display: grid;
+    align-items: center;
+     /* le di margins a los costados para que en mobile se le vea un pequeño espacio a los costados de la caja
+     y no se vea tan pegado la caja blanca*/
+    margin-left: 10px;
+    margin-right: 10px;
+}
+ /* al parrafo le di un width relativo al padre para poder  centrarlo con margins a los costados*/
+p{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+  /* tamaño al titulo y un margin bottom para separarlo del parrafo */
+.quotebox__title{
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+/* posiconado igual que el author solo que este en la parte final y le di un maxwidth, ya no fue necesario envolverlo
+en una caja padre como a la imagen del buttom */
+.quotebox__planet{
+    max-width: 362px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+ /* un mediquery para aumentarle el tamaño a los elementos, porque de por si ya era responsive
+ , es solo para aumentar las separacion y tamaños */
+@media (min-width:600px) {
+
+    /* aumento el tamaño y lo subi un poco respecto al medio con margin bottom */
+    .quotebox{
+    max-width: 600px;
+       margin-bottom: 140px;
+       gap: 25px;
+    }
+      /* mayor tamaño a la imagen*/
+    .quotebox__planet{
+        max-width: 500px;
+        
+        
+    }
+    /*mayor tamaño al titulo y una separacion respecto al parrafo con margin bottom */
+    .quotebox__title{
+        font-size: 4.5rem;
+        margin-bottom: 50px;
+    }
+      /*le aumente el tamaño al boton */
+    button{
+        border: 0;
+        background-color: transparent;
+        width: 70px;
+        position: relative;
+        z-index: 10;
+    }
+
+}

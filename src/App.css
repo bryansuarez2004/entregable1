@@ -1,0 +1,24 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  font-family: 'DS-Digital', sans-serif;
+}
+
+.bg1{
+  background-image: url(/images/imagen1.webp);
+}
+
+.bg2{
+  background-image: url(/images/imagen2.webp);
+}
+.bg3{
+  background-image: url(/images/imagen3.webp);
+}
+.bg4{
+  background-image: url(/images/imagen4.webp);
+}

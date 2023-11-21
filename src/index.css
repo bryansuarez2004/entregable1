@@ -1,0 +1,12 @@
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+
+*{
+  margin: 0;  /* me resulta mas facil trabajar con todas las etiquetas con 0 margin y padding */
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+*::after,                        
+*::before {
+  box-sizing: inherit;          
+}
